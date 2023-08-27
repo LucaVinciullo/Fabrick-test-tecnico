@@ -1,12 +1,17 @@
-.app-root-container {
+@import "../assets/sass/variables";
+
+.app-root-wrapper {
   display: flex;
   justify-content: center;
+  background-color: $cool-blue-10;
 }
 
 .logo-background {
   height: 100vh;
   width: 100vw;
   max-width: 800px;
+
+  background-color: $white-100;
   background-image: url('../assets/images/fabrick-logo-blue.jpg');
   background-repeat: no-repeat;
   background-position: center;

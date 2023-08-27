@@ -1,0 +1,14 @@
+@import "variables";
+@import "typography";
+
+
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+
+a {
+  color: $cool-blue-100;
+}
