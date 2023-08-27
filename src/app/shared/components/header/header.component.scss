@@ -1,0 +1,18 @@
+@import "../../../../assets/sass/variables";
+
+.header-wrapper {
+  padding: 0 $space-s;
+  display: grid;
+  grid-template-columns: 40px auto 40px;
+  gap: $space-m;
+  justify-items: center;
+  align-items: center;
+
+  .logo-img {
+    grid-column: 2 / 2;
+  }
+  .back-icon {
+    grid-column: 1 / 1;
+    color: $cool-blue-100;
+  }
+}
