@@ -1,4 +1,17 @@
 <header class="header-wrapper">
-  <mat-icon class="back-icon" aria-hidden="false" fontIcon="arrow_left"></mat-icon>
-  <img height="48px" class="logo-img" src="../../../../assets/images/fabrick-logo-blue.jpg">
+  <a class="dashboard-icon" routerLink="/dashboard" routerLinkActive="active" [attr.aria-label]="'dashboard.title' | translate">
+    <mat-icon
+      fontIcon="dashboard"
+    >
+    </mat-icon>
+  </a>
+
+  <img height="48px" class="logo-img" src="../../../../assets/images/teal-logo.jpg">
+
+  <a class="home-icon"  routerLink="/home" routerLinkActive="active" [attr.aria-label]="'home.title' | translate">
+    <mat-icon
+      fontIcon="home"
+    ></mat-icon>
+  </a>
+
 </header>
