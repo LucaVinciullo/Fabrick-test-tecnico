@@ -12,8 +12,12 @@ const routes: Routes = [
     loadChildren: () => import('src/app/feature-modules/dashboard/dashboard.module').then(m => m.DashboardModule),
   },
   {
+    path: 'home',
+    loadChildren: () => import('src/app/feature-modules/home/home.module').then(m => m.HomeModule),
+  },
+  {
     path: '**',
-    redirectTo: '/dashboard',
+    redirectTo: '/home',
   },
 ];
 

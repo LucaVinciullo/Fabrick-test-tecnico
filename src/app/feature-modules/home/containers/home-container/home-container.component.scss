@@ -1,0 +1,50 @@
+@import "../../../../../assets/sass/variables";
+
+.home-wrapper {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: $blue-grey-900;
+}
+.project-title {
+  padding-top: $space-l;
+  text-align: center;
+}
+.project-proposition-wrapper {
+  display: flex;
+  flex-direction: column;
+  grid-gap: $space-l;
+
+  > * {
+    padding: 0 $space-m;
+  }
+
+  @media (min-width: $breakpoint-tablet-portrait) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    > * {
+      flex: 1 1 0px;
+
+      &.get-started-wrapper {
+        padding: 0 0 0 $space-l;
+      }
+
+      &.web-app-img-wrapper {
+        padding: 0 $space-l 0 0;
+      }
+    }
+  }
+
+  .get-started-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .web-app-img-wrapper {
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
