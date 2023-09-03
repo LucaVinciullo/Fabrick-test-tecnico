@@ -1,0 +1,26 @@
+@import "src/assets/sass/variables";
+
+.feature-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $space-l;
+  border: 2px solid $teal-50;
+  border-radius: $space-s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $blue-grey-800;
+    box-shadow: 0 0 $space-m $space-s $teal-900;
+  }
+
+  &:active {
+    background-color: $blue-grey-900;
+  }
+
+  .mat-icon {
+    font-size: 48px;
+    height: 48px;
+    width: 48px;
+  }
+}

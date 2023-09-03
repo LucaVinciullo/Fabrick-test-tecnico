@@ -15,5 +15,7 @@ import { FooterComponent } from './components/footer/footer.component';
     SharedModule,
     HomeRoutingModule,
   ],
+  exports: [
+  ],
 })
 export class HomeModule { }

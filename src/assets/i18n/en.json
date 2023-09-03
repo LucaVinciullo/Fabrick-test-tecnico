@@ -1,12 +1,18 @@
 {
   "home": {
-    "title": "home",
+    "title": "Home",
     "projectTitle": "Fabrick technical test",
     "getStartedTitle": "About the project",
     "getStartedMessage": "This web app is designed to help you manage user data efficiently. You can create new user profiles and retrieve user information effortlessly using this application.",
     "getStartedCta": "Let's go!"
   },
   "dashboard": {
-    "title": "dashboard"
+    "title": "Dashboard"
+  },
+  "inquiry": {
+    "title": "User inquiry"
+  },
+  "registration": {
+    "title": "User registration"
   }
 }
