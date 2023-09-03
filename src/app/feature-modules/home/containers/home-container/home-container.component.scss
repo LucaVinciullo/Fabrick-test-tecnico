@@ -17,7 +17,7 @@
 .project-proposition-wrapper {
   display: flex;
   flex-direction: column;
-  grid-gap: $space-l;
+  gap: $space-l;
   padding-bottom: $space-l;
 
   > * {

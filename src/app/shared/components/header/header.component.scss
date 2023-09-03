@@ -1,7 +1,7 @@
 @import "../../../../assets/sass/variables";
 
 .header-wrapper {
-  padding: $space-s;
+  padding: $space-s $space-l;
   display: grid;
   grid-template-columns: 64px auto 64px;
   gap: $space-m;

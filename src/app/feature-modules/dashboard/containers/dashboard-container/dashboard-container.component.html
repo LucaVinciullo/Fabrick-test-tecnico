@@ -1,4 +1,14 @@
 <div class="dashboard-wrapper">
-  <fab-header></fab-header>
-  <p>dashboard-container-works</p>
+  <fab-header [hasDashboardLink]="false"></fab-header>
+  <div class="user-features-wrapper">
+    <fab-feature-card
+      [name]="'inquiry.title' | translate"
+      icon="person_add"
+      routerLink="/inquiry"
+    ></fab-feature-card>
+    <fab-feature-card
+      [name]="'registration.title' | translate"
+      icon="person_search"
+      routerLink="/registration"></fab-feature-card>
+  </div>
 </div>

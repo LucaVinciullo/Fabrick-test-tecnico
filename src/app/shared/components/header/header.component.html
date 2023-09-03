@@ -1,5 +1,5 @@
 <header class="header-wrapper">
-  <a class="dashboard-icon" routerLink="/dashboard" routerLinkActive="active" [attr.aria-label]="'dashboard.title' | translate">
+  <a *ngIf="hasDashboardLink" class="dashboard-icon" routerLink="/dashboard" routerLinkActive="active" [attr.aria-label]="'dashboard.title' | translate">
     <mat-icon
       fontIcon="dashboard"
     >

@@ -4,7 +4,22 @@
 .dashboard-wrapper {
   @include base-container;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  .user-features-wrapper {
+    padding: $space-l;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: $space-l;
+
+    > * {
+      flex: 0 0 200px;
+    }
+
+    @media (min-width: $breakpoint-tablet-portrait) {
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+  }
 }
