@@ -1,9 +1,9 @@
 @import "../../../../assets/sass/variables";
 
 .header-wrapper {
-  padding: 0 $space-s;
+  padding: $space-s;
   display: grid;
-  grid-template-columns: 40px auto 40px;
+  grid-template-columns: 64px auto 64px;
   gap: $space-m;
   justify-items: center;
   align-items: center;
@@ -11,8 +11,21 @@
   .logo-img {
     grid-column: 2 / 2;
   }
-  .back-icon {
+
+  .dashboard-icon, .home-icon {
+    .mat-icon {
+      color: $teal-700;
+      height: 48px;
+      width: 48px;
+      font-size: 48px;
+    }
+  }
+
+  .dashboard-icon {
     grid-column: 1 / 1;
-    color: $teal-700;
+  }
+
+  .home-icon {
+    grid-column: 3 / 3;
   }
 }
