@@ -1,0 +1,55 @@
+@use '@angular/material' as mat;
+@import "variables";
+
+@include mat.core();
+
+$teal-palette: (
+  50: $teal-50,
+  100: $teal-100,
+  200: $teal-200,
+  300: $teal-300,
+  400: $teal-400,
+  500: $teal-500,
+  600: $teal-600,
+  700: $teal-700,
+  800: $teal-800,
+  900: $teal-900,
+  A100: $teal-accent-100,
+  A200: $teal-accent-200,
+  A400: $teal-accent-400,
+  A700: $teal-accent-700,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: $teal-50,
+    600: $teal-50,
+    700: $teal-50,
+    800: $teal-50,
+    900: $teal-50,
+    A100: rgba(black, 0.87),
+    A200: rgba(black, 0.87),
+    A400: rgba(black, 0.87),
+    A700: rgba(black, 0.87),
+  )
+);
+
+$fab-primary: mat.define-palette($teal-palette, 700, 400, 900, 50);
+$fab-accent: mat.define-palette($teal-palette, A100);
+$fab-warn: mat.define-palette(mat.$red-palette);
+
+$fab-theme: mat.define-dark-theme((
+  color: (
+    primary: $fab-primary,
+    accent: $fab-accent,
+    warn: $fab-warn,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0,
+));
+
+
+@include mat.all-component-themes($fab-theme);
+@include mat.strong-focus-indicators-theme($fab-theme);

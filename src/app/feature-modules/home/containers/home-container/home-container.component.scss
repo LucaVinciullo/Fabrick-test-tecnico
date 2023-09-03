@@ -5,10 +5,13 @@
   width: 100vw;
   background-color: $blue-grey-900;
 }
+
 .project-title {
-  padding-top: $space-l;
+  margin: 0;
+  padding: $space-l 0;
   text-align: center;
 }
+
 .project-proposition-wrapper {
   display: flex;
   flex-direction: column;
