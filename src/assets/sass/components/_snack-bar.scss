@@ -1,0 +1,10 @@
+.mat-mdc-snack-bar-container {
+  &.error-notification {
+    --mdc-snackbar-container-color: #EF5350; // $red-400
+    --mdc-snackbar-supporting-text-color: #000000DE; // $black
+  }
+  &.info-notification {
+    --mdc-snackbar-container-color: #1DE9B6; // $teal-accent-400
+    --mdc-snackbar-supporting-text-color: #000000DE; //$black
+  }
+}
