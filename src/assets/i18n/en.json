@@ -13,7 +13,26 @@
     "title": "User inquiry"
   },
   "registration": {
-    "title": "User registration"
+    "title": "User registration",
+    "complete": "Registration complete!",
+    "form": {
+      "email": {
+        "label":"Email",
+        "placeholder": "user@domain.ext"
+      },
+      "name": {
+        "label":"Name",
+        "placeholder": "Firstname Lastname"
+      },
+      "gender": {
+        "label":"Gender",
+        "placeholder": "non binary"
+      },
+      "status": {
+        "label":"Status",
+        "placeholder": "active"
+      }
+    }
   },
   "notifications": {
     "genericError": "There was a problem with your request. Please try again."

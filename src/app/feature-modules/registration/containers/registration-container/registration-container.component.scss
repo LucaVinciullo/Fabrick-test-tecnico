@@ -1,0 +1,10 @@
+@import "src/assets/sass/variables";
+@import "src/assets/sass/mixins";
+
+.user-form,
+.user-form-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: $space-l;
+}

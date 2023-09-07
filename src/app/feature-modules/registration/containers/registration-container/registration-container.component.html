@@ -1,1 +1,47 @@
-<p>registration-container works!</p>
+<fab-base-feature-container title="registration.title">
+  <form class="user-form" [formGroup]="userForm">
+    <div class="user-form-row">
+      <mat-form-field floatLabel="always" appearance="outline" color="accent">
+        <mat-label>{{ 'registration.form.name.label' | translate }}</mat-label>
+        <input
+          type="text"
+          matNativeControl
+          formControlName="name"
+          [placeholder]="'registration.form.name.placeholder' | translate"
+        >
+      </mat-form-field>
+
+      <mat-form-field floatLabel="always" appearance="outline" color="accent">
+        <mat-label>{{ 'registration.form.email.label' | translate }}</mat-label>
+        <input
+          type="email"
+          matNativeControl
+          formControlName="email"
+          [placeholder]="'registration.form.email.placeholder' | translate"
+        >
+      </mat-form-field>
+    </div>
+    <div class="user-form-row">
+      <mat-form-field floatLabel="always" appearance="outline" color="accent">
+        <mat-label>{{ 'registration.form.gender.label' | translate }}</mat-label>
+        <select
+          matNativeControl
+          formControlName="gender"
+          [placeholder]="'registration.form.gender.placeholder' | translate">
+          <option *ngFor="let value of genderOptions" [value]="value">{{ value }}</option>
+        </select>
+      </mat-form-field>
+
+      <mat-form-field floatLabel="always" appearance="outline" color="accent">
+        <mat-label>{{ 'registration.form.status.label' | translate }}</mat-label>
+        <select
+          matNativeControl
+          formControlName="status"
+          [placeholder]="'registration.form.status.placeholder' | translate">
+          <option *ngFor="let value of statusOptions" [value]="value">{{ value }}</option>
+        </select>
+      </mat-form-field>
+    </div>
+  </form>
+  <div class="buttons-wrapper"></div>
+</fab-base-feature-container>
