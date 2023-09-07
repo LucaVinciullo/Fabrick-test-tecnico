@@ -14,5 +14,8 @@
   },
   "registration": {
     "title": "User registration"
+  },
+  "notifications": {
+    "genericError": "There was a problem with your request. Please try again."
   }
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoaderService } from './core/loader/services/loader.service';
 
 @Component({
   selector: 'app-root',
@@ -6,4 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+
+  isLoaderVisible$ = this.loaderService.isLoaderVisible$;
+
+  constructor(private loaderService: LoaderService) {
+  }
 }
