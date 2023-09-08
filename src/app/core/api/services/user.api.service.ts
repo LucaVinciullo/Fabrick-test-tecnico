@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HttpService } from '../../http/services/http.service';
+import { HttpService } from 'src/app/core/http/services/http.service';
+import {UserFormValue} from "src/app/feature-modules/registration/model/user-form-value.interface";
 
 @Injectable({
   providedIn: 'root',
@@ -8,7 +9,7 @@ import { HttpService } from '../../http/services/http.service';
 export class UserApiService {
   constructor(private httpService: HttpService) { }
 
-  registerUser(userForm: unknown): Observable<unknown> {
+  registerUser(userForm: NonNullable<UserFormValue>): Observable<unknown> {
     return this.httpService.request('post', 'users', userForm);
   }
 
