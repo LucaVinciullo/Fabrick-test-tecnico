@@ -13,8 +13,6 @@ export class LoaderService {
 
   isLoaderVisible$: Observable<boolean> = this.loaderCounter$.pipe(map(counter => counter > 0));
 
-  constructor() { }
-
   incrementLoaderCounter() {
     this.loaderCounterSubj$.next(this.loaderCounterSubj$.value + 1);
   }

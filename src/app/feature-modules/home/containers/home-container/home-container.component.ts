@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { UserApiService } from '../../../../core/api/services/user.api.service';
 
 @Component({
   selector: 'fab-home-container',
