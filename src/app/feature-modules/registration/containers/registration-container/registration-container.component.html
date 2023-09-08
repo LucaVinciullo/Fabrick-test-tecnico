@@ -24,24 +24,42 @@
     <div class="user-form-row">
       <mat-form-field floatLabel="always" appearance="outline" color="accent">
         <mat-label>{{ 'registration.form.gender.label' | translate }}</mat-label>
-        <select
-          matNativeControl
+        <mat-select
           formControlName="gender"
-          [placeholder]="'registration.form.gender.placeholder' | translate">
-          <option *ngFor="let value of genderOptions" [value]="value">{{ value }}</option>
-        </select>
+          [placeholder]="'registration.form.gender.placeholder' | translate"
+          [matTooltip]="'registration.form.nonBinaryWip' | translate"
+          matTooltipPosition="above">
+          <mat-option *ngFor="let value of genderOptions" [value]="value">{{ value }}</mat-option>
+        </mat-select>
       </mat-form-field>
 
       <mat-form-field floatLabel="always" appearance="outline" color="accent">
         <mat-label>{{ 'registration.form.status.label' | translate }}</mat-label>
-        <select
-          matNativeControl
+        <mat-select
           formControlName="status"
           [placeholder]="'registration.form.status.placeholder' | translate">
-          <option *ngFor="let value of statusOptions" [value]="value">{{ value }}</option>
-        </select>
+          <mat-option *ngFor="let value of statusOptions" [value]="value">{{ value }}</mat-option>
+        </mat-select>
       </mat-form-field>
     </div>
+
+    <div class="buttons-wrapper">
+      <button
+        mat-raised-button
+        type="button"
+        color="accent"
+        [disabled]="userForm.pristine"
+        (click)="clearForm()"
+      >{{'registration.form.clear' | translate}}
+      </button>
+      <button
+        mat-raised-button
+        type="button"
+        color="primary"
+        [disabled]="userForm.invalid"
+        (click)="userRegistration()"
+      >{{'registration.form.submit' | translate}}
+      </button>
+    </div>
   </form>
-  <div class="buttons-wrapper"></div>
 </fab-base-feature-container>

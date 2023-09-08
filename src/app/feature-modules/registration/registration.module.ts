@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { SharedModule } from 'fab-shared/shared.module';
 import { RegistrationContainerComponent } from 'src/app/feature-modules/registration/containers/registration-container/registration-container.component';
 import { RegistrationFacadeService } from 'src/app/feature-modules/registration/services/registration.facade.service';
@@ -24,6 +25,7 @@ import { RegistrationRoutingModule } from 'src/app/feature-modules/registration/
     MatButtonModule,
     MatInputModule,
     MatSelectModule,
+    MatTooltipModule,
   ],
   providers: [
     RegistrationFacadeService,
