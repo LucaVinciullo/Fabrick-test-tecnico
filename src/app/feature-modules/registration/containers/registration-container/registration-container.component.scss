@@ -1,0 +1,21 @@
+@import "src/assets/sass/variables";
+
+.user-form {
+  margin: $space-l;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: $space-l;
+}
+
+.user-form-row,
+.buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: $space-l;
+}
+
+.buttons-wrapper > button {
+    flex: 0 0 200px;
+}

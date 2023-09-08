@@ -1,17 +1,16 @@
 <header class="header-wrapper">
-  <a *ngIf="hasDashboardLink" class="dashboard-icon" routerLink="/dashboard" routerLinkActive="active" [attr.aria-label]="'dashboard.title' | translate">
+  <a class="dashboard-icon" routerLink="/dashboard" routerLinkActive="active" [attr.aria-label]="'dashboard.title' | translate">
     <mat-icon
       fontIcon="dashboard"
     >
     </mat-icon>
   </a>
 
-  <img height="48px" class="logo-img" src="assets/images/teal-logo.jpg">
+  <img height="48px" width="48px" class="logo-img" src="assets/images/teal-logo.jpg" alt>
 
   <a class="home-icon"  routerLink="/home" routerLinkActive="active" [attr.aria-label]="'home.title' | translate">
     <mat-icon
       fontIcon="home"
     ></mat-icon>
   </a>
-
 </header>

@@ -1,25 +1,14 @@
 @import "src/assets/sass/variables";
-@import "src/assets/sass/mixins";
 
-.dashboard-wrapper {
-  @include base-container;
+.user-features-wrapper {
+  padding: $space-l;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: $space-l;
 
-  .user-features-wrapper {
-    padding: $space-l;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: $space-l;
-
-    > * {
-      flex: 0 0 200px;
-    }
-
-    @media (min-width: $breakpoint-tablet-portrait) {
-      flex-direction: row;
-      justify-content: space-evenly;
-      align-items: center;
-    }
+  > * {
+    flex: 0 0 200px;
   }
 }

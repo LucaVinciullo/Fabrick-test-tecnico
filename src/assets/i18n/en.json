@@ -13,7 +13,29 @@
     "title": "User inquiry"
   },
   "registration": {
-    "title": "User registration"
+    "title": "User registration",
+    "complete": "Registration complete!",
+    "form": {
+      "email": {
+        "label":"Email",
+        "placeholder": "user@domain.ext"
+      },
+      "name": {
+        "label":"Name",
+        "placeholder": "Firstname Lastname"
+      },
+      "gender": {
+        "label":"Gender",
+        "placeholder": "male/female"
+      },
+      "status": {
+        "label":"Status",
+        "placeholder": "active/inactive"
+      },
+      "nonBinaryWip": "We're sorry to inform you non binary options are under development and currently unavailable.",
+      "clear": "Clear",
+      "submit": "Register"
+    }
   },
   "notifications": {
     "genericError": "There was a problem with your request. Please try again."

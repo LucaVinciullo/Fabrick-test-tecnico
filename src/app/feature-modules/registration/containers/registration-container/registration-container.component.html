@@ -1,1 +1,65 @@
-<p>registration-container works!</p>
+<fab-base-feature-container title="registration.title">
+  <form class="user-form" [formGroup]="userForm">
+    <div class="user-form-row">
+      <mat-form-field floatLabel="always" appearance="outline" color="accent">
+        <mat-label>{{ 'registration.form.name.label' | translate }}</mat-label>
+        <input
+          type="text"
+          matNativeControl
+          formControlName="name"
+          [placeholder]="'registration.form.name.placeholder' | translate"
+        >
+      </mat-form-field>
+
+      <mat-form-field floatLabel="always" appearance="outline" color="accent">
+        <mat-label>{{ 'registration.form.email.label' | translate }}</mat-label>
+        <input
+          type="email"
+          matNativeControl
+          formControlName="email"
+          [placeholder]="'registration.form.email.placeholder' | translate"
+        >
+      </mat-form-field>
+    </div>
+    <div class="user-form-row">
+      <mat-form-field floatLabel="always" appearance="outline" color="accent">
+        <mat-label>{{ 'registration.form.gender.label' | translate }}</mat-label>
+        <mat-select
+          formControlName="gender"
+          [placeholder]="'registration.form.gender.placeholder' | translate"
+          [matTooltip]="'registration.form.nonBinaryWip' | translate"
+          matTooltipPosition="above">
+          <mat-option *ngFor="let value of genderOptions" [value]="value">{{ value }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field floatLabel="always" appearance="outline" color="accent">
+        <mat-label>{{ 'registration.form.status.label' | translate }}</mat-label>
+        <mat-select
+          formControlName="status"
+          [placeholder]="'registration.form.status.placeholder' | translate">
+          <mat-option *ngFor="let value of statusOptions" [value]="value">{{ value }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="buttons-wrapper">
+      <button
+        mat-raised-button
+        type="button"
+        color="accent"
+        [disabled]="userForm.pristine"
+        (click)="clearForm()"
+      >{{'registration.form.clear' | translate}}
+      </button>
+      <button
+        mat-raised-button
+        type="button"
+        color="primary"
+        [disabled]="userForm.invalid"
+        (click)="userRegistration()"
+      >{{'registration.form.submit' | translate}}
+      </button>
+    </div>
+  </form>
+</fab-base-feature-container>

@@ -1,0 +1,10 @@
+@import "src/assets/sass/variables";
+@import "src/assets/sass/mixins";
+
+.registration-wrapper {
+  @include base-container;
+
+  .container-title {
+    text-align: center;
+  }
+}
