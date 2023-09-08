@@ -29,7 +29,7 @@ export class HttpService {
       }),
       catchError(error => {
         this.sendErrorFeedback();
-        return throwError(error);
+        return throwError(() => error);
       }),
       finalize(() => {
         this.stopLoading();
@@ -46,6 +46,6 @@ export class HttpService {
   }
 
   private sendErrorFeedback() {
-    this.notificationService.info('notifications.genericError');
+    this.notificationService.error('notifications.genericError');
   }
 }

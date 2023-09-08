@@ -13,7 +13,7 @@ export class NotificationService {
       this.translateService.instant(i18nMessageKey),
       undefined,
       {
-        // duration: 10000,
+        duration: 3000,
         verticalPosition: 'top',
         horizontalPosition: 'right',
         politeness: 'assertive',
