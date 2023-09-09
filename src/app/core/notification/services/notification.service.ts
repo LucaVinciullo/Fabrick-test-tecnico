@@ -9,9 +9,11 @@ export class NotificationService {
   constructor(private snackBar: MatSnackBar, private translateService: TranslateService) {
   }
 
-  private notify(i18nMessageKey: string, panelClass?: string | string[]) {
+  private notify(panelClass: string, i18nMessageKey: string, interpolateParams?: {
+    [k: string]: string | number
+  }) {
     this.snackBar.open(
-      this.translateService.instant(i18nMessageKey),
+      this.translateService.instant(i18nMessageKey, interpolateParams),
       undefined,
       {
         duration: 3000,
@@ -22,11 +24,11 @@ export class NotificationService {
       });
   }
 
-  info(i18nMessageKey: string) {
-    this.notify(i18nMessageKey, 'info-notification');
+  info(i18nMessageKey: string, interpolateParams?: { [k: string]: string | number }) {
+    this.notify('info-notification', i18nMessageKey, interpolateParams);
   }
 
-  error(i18nMessageKey: string) {
-    this.notify(i18nMessageKey, 'error-notification');
+  error(i18nMessageKey: string, interpolateParams?: { [k: string]: string | number }) {
+    this.notify('error-notification', i18nMessageKey, interpolateParams);
   }
 }

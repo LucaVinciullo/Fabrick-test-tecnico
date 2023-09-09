@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { LoaderService } from 'fab-core/loader/services/loader.service';
 import { NotificationService } from 'fab-core/notification/services/notification.service';
@@ -13,7 +13,7 @@ export class HttpService {
   constructor(private httpClient: HttpClient, private loaderService: LoaderService, private notificationService: NotificationService) {
   }
 
-  request(method: 'get' | 'post', url: string, body: unknown = null): Observable<unknown> {
+  request<T>(method: 'get' | 'post', url: string, body: unknown = null): Observable<T> {
     this.initLoading();
     const options = {
       headers: new HttpHeaders({
@@ -24,13 +24,17 @@ export class HttpService {
       ...(body ? { body } : null),
     };
 
-    return this.httpClient.request(method, `${environment.baseUrl}${url}`, options).pipe(
+    return this.httpClient.request<T>(method, `${environment.baseUrl}${url}`, options).pipe(
       map(response => {
         return response;
       }),
-      catchError(error => {
-        this.sendErrorFeedback();
-        return throwError(() => error);
+      catchError((errorResponse: HttpErrorResponse) => {
+        this.sendErrorFeedback(
+          Array.isArray(errorResponse?.error)
+            ? errorResponse?.error.map(error => `${error?.field} ${error?.message}`).join(', ')
+            : undefined,
+        );
+        return throwError(() => errorResponse);
       }),
       finalize(() => {
         this.stopLoading();
@@ -46,7 +50,7 @@ export class HttpService {
     this.loaderService.decrementLoaderCounter();
   }
 
-  private sendErrorFeedback() {
-    this.notificationService.error('notifications.genericError');
+  private sendErrorFeedback(errorMessage?: string) {
+    this.notificationService.error('notifications.genericError', { error: errorMessage ?? '' });
   }
 }

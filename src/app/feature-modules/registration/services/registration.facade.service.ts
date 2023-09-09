@@ -21,8 +21,8 @@ export class RegistrationFacadeService extends AbstractSmartFacadeClass {
   userRegistration(userFormValue: NonNullable<UserFormValue>) {
     this.subscription?.add(this.userApiService.registerUser(userFormValue).pipe(
       take(1),
-      map(() => {
-        this.notificationService.info('registration.complete');
+      map((user) => {
+        this.notificationService.info('registration.complete', { userId: user.id });
         this.userFormSubject$.next(null);
       }),
     ).subscribe());
