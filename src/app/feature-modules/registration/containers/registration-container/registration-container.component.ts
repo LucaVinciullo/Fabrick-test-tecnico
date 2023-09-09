@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { GenderType } from 'fab-features/registration/model/gender.type';
 import { StatusType } from 'fab-features/registration/model/status.type';
@@ -13,7 +13,7 @@ import { debounceTime } from 'rxjs/operators';
   templateUrl: './registration-container.component.html',
   styleUrls: ['./registration-container.component.scss'],
 })
-export class RegistrationContainerComponent extends AbstractSmartContainerClass implements OnDestroy {
+export class RegistrationContainerComponent extends AbstractSmartContainerClass {
   shouldClearStateOnDestroy = false;
 
   userForm$ = this.facade.userForm$;
