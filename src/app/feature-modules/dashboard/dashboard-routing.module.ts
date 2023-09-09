@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardContainerComponent } from './containers/dashboard-container/dashboard-container.component';
+import {
+  DashboardContainerComponent,
+} from 'fab-features/dashboard/containers/dashboard-container/dashboard-container.component';
 
 const routes: Routes = [
   {
@@ -13,4 +15,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class DashboardRoutingModule { }
+export class DashboardRoutingModule {
+}

@@ -6,7 +6,8 @@ import { TranslateService } from '@ngx-translate/core';
   providedIn: 'root',
 })
 export class NotificationService {
-  constructor(private snackBar: MatSnackBar, private translateService: TranslateService) { }
+  constructor(private snackBar: MatSnackBar, private translateService: TranslateService) {
+  }
 
   private notify(i18nMessageKey: string, panelClass?: string | string[]) {
     this.snackBar.open(

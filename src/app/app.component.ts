@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoaderService } from './core/loader/services/loader.service';
+import { LoaderService } from 'fab-core/loader/services/loader.service';
 
 @Component({
   selector: 'fab-root',

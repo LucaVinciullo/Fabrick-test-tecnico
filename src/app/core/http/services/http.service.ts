@@ -1,16 +1,17 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { LoaderService } from 'fab-core/loader/services/loader.service';
+import { NotificationService } from 'fab-core/notification/services/notification.service';
 import { Observable, throwError } from 'rxjs';
 import { catchError, finalize, map } from 'rxjs/operators';
-import { LoaderService } from 'src/app/core/loader/services/loader.service';
-import { NotificationService } from 'src/app/core/notification/services/notification.service';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class HttpService {
-  constructor(private httpClient: HttpClient, private loaderService: LoaderService, private notificationService: NotificationService) { }
+  constructor(private httpClient: HttpClient, private loaderService: LoaderService, private notificationService: NotificationService) {
+  }
 
   request(method: 'get' | 'post', url: string, body: unknown = null): Observable<unknown> {
     this.initLoading();

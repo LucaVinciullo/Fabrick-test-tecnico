@@ -1,12 +1,12 @@
 import { Component, OnDestroy } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { debounceTime } from 'rxjs/operators';
+import { GenderType } from 'fab-features/registration/model/gender.type';
+import { StatusType } from 'fab-features/registration/model/status.type';
+import { UserFormValue } from 'fab-features/registration/model/user-form-value.interface';
+import { RegistrationFacadeService } from 'fab-features/registration/services/registration.facade.service';
 import { AbstractSmartContainerClass } from 'fab-shared/components/abstract/abstract-smart-container.class';
-import { RegistrationFacadeService } from 'src/app/feature-modules/registration/services/registration.facade.service';
-import { GenderType } from 'src/app/feature-modules/registration/model/gender.type';
-import { StatusType } from 'src/app/feature-modules/registration/model/status.type';
 import { ControlsOf } from 'fab-shared/model/controls-of.type';
-import { UserFormValue } from 'src/app/feature-modules/registration/model/user-form-value.interface';
+import { debounceTime } from 'rxjs/operators';
 
 @Component({
   selector: 'fab-registration-container',

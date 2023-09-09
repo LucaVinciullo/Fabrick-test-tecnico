@@ -9,19 +9,19 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    loadChildren: () => import('src/app/feature-modules/dashboard/dashboard.module').then(m => m.DashboardModule),
+    loadChildren: () => import('fab-features/dashboard/dashboard.module').then(m => m.DashboardModule),
   },
   {
     path: 'inquiry',
-    loadChildren: () => import('src/app/feature-modules/inquiry/inquiry.module').then(m => m.InquiryModule),
+    loadChildren: () => import('fab-features/inquiry/inquiry.module').then(m => m.InquiryModule),
   },
   {
     path: 'registration',
-    loadChildren: () => import('src/app/feature-modules/registration/registration.module').then(m => m.RegistrationModule),
+    loadChildren: () => import('fab-features/registration/registration.module').then(m => m.RegistrationModule),
   },
   {
     path: 'home',
-    loadChildren: () => import('src/app/feature-modules/home/home.module').then(m => m.HomeModule),
+    loadChildren: () => import('fab-features/home/home.module').then(m => m.HomeModule),
   },
   {
     path: '**',

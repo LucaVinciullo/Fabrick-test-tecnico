@@ -20,7 +20,15 @@
     "module": "ES2022",
     "useDefineForClassFields": false,
     "paths": {
-      "fab-shared/*": ["src/app/shared/*"]
+      "fab-core/*": [
+        "src/app/core/*"
+      ],
+      "fab-features/*": [
+        "src/app/feature-modules/*"
+      ],
+      "fab-shared/*": [
+        "src/app/shared/*"
+      ]
     },
     "lib": [
       "ES2022",

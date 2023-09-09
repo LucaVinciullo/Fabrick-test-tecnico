@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RegistrationContainerComponent } from 'src/app/feature-modules/registration/containers/registration-container/registration-container.component';
+import {
+  RegistrationContainerComponent,
+} from 'fab-features/registration/containers/registration-container/registration-container.component';
 
 const routes: Routes = [
   {
@@ -13,4 +15,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class RegistrationRoutingModule { }
+export class RegistrationRoutingModule {
+}

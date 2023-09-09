@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { InquiryContainerComponent } from 'fab-features/inquiry/containers/inquiry-container/inquiry-container.component';
+import { InquiryRoutingModule } from 'fab-features/inquiry/inquiry-routing.module';
 import { SharedModule } from 'fab-shared/shared.module';
-import { InquiryContainerComponent } from './containers/inquiry-container/inquiry-container.component';
-import { InquiryRoutingModule } from './inquiry-routing.module';
 
 @NgModule({
   declarations: [

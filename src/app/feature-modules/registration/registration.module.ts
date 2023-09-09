@@ -1,15 +1,17 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import {
+  RegistrationContainerComponent,
+} from 'fab-features/registration/containers/registration-container/registration-container.component';
+import { RegistrationRoutingModule } from 'fab-features/registration/registration-routing.module';
+import { RegistrationFacadeService } from 'fab-features/registration/services/registration.facade.service';
 import { SharedModule } from 'fab-shared/shared.module';
-import { RegistrationContainerComponent } from 'src/app/feature-modules/registration/containers/registration-container/registration-container.component';
-import { RegistrationFacadeService } from 'src/app/feature-modules/registration/services/registration.facade.service';
-import { RegistrationRoutingModule } from 'src/app/feature-modules/registration/registration-routing.module';
 
 @NgModule({
   declarations: [

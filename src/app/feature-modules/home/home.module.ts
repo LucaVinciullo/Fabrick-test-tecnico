@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FooterComponent } from 'fab-features/home/components/footer/footer.component';
+import { HomeContainerComponent } from 'fab-features/home/containers/home-container/home-container.component';
+import { HomeRoutingModule } from 'fab-features/home/home-routing.module';
 import { SharedModule } from 'fab-shared/shared.module';
-import { HomeRoutingModule } from './home-routing.module';
-import { HomeContainerComponent } from './containers/home-container/home-container.component';
-import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import { FooterComponent } from './components/footer/footer.component';
     SharedModule,
     HomeRoutingModule,
   ],
-  exports: [
-  ],
+  exports: [],
 })
-export class HomeModule { }
+export class HomeModule {
+}

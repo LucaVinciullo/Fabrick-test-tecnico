@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
+import { UserApiService } from 'fab-core/api/services/user.api.service';
+import { NotificationService } from 'fab-core/notification/services/notification.service';
+import { UserFormValue } from 'fab-features/registration/model/user-form-value.interface';
+import { AbstractSmartFacadeClass } from 'fab-shared/components/abstract/abstract-smart-facade.class';
 import { BehaviorSubject } from 'rxjs';
 import { map, take } from 'rxjs/operators';
-import { AbstractSmartFacadeClass } from 'fab-shared/components/abstract/abstract-smart-facade.class';
-import { UserApiService } from 'src/app/core/api/services/user.api.service';
-import { NotificationService } from 'src/app/core/notification/services/notification.service';
-import { UserFormValue } from 'src/app/feature-modules/registration/model/user-form-value.interface';
 
 @Injectable({
   providedIn: 'root',

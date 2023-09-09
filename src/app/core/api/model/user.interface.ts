@@ -1,4 +1,4 @@
-import { UserFormValue } from 'src/app/feature-modules/registration/model/user-form-value.interface';
+import { UserFormValue } from 'fab-features/registration/model/user-form-value.interface';
 
 type NonNullableInterface<T> = {
   [P in keyof T]: NonNullable<T[P]>
@@ -7,3 +7,4 @@ type NonNullableInterface<T> = {
 export interface User extends NonNullableInterface<UserFormValue> {
   id: number,
 }
+
