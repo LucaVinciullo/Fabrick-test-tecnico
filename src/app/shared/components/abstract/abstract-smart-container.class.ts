@@ -1,6 +1,7 @@
+/* eslint-disable @angular-eslint/component-class-suffix */
 import { Component, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs';
 import { AbstractSmartFacadeClass } from 'fab-shared/components/abstract/abstract-smart-facade.class';
+import { Subscription } from 'rxjs';
 
 @Component({
   template: '',
