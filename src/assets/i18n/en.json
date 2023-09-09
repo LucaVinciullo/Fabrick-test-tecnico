@@ -1,4 +1,7 @@
 {
+  "common": {
+    "user": "User"
+  },
   "home": {
     "title": "Home",
     "projectTitle": "Fabrick technical test",
@@ -18,6 +21,11 @@
         "patternError": "Decimal numbers are invalid"
       },
       "search": "Search user"
+    },
+    "user": {
+      "email": "Email",
+      "gender": "Gender",
+      "status": "Status"
     }
   },
   "registration": {

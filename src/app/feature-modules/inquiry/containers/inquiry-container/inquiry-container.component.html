@@ -20,5 +20,19 @@
     >{{'inquiry.form.search' | translate}}
     </button>
   </form>
+
+  <section *ngIf="(lastInquiredId && (users$ | async)?.[lastInquiredId]) as user" class="user-info-wrapper">
+    <mat-card class="user-card">
+      <mat-card-header>
+        <mat-card-title>{{ 'common.user' | translate }} {{ user?.id }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <fab-user-attribute name="inquiry.user.name" [value]="user.name"></fab-user-attribute>
+        <fab-user-attribute name="inquiry.user.email" [value]="user.email"></fab-user-attribute>
+        <fab-user-attribute name="inquiry.user.gender" [value]="user.gender"></fab-user-attribute>
+        <fab-user-attribute name="inquiry.user.status" [value]="user.status"></fab-user-attribute>
+      </mat-card-content>
+    </mat-card>
+  </section>
 </fab-base-feature-container>
 

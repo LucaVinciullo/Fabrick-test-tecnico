@@ -5,7 +5,24 @@
   margin: $space-l auto;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: baseline;
+
+  > * {
+    width: 220px;
+  }
+}
+
+.user-info-wrapper {
+  margin: $space-l;
+  display: flex;
+  justify-content: center;
+}
+
+.user-card {
+  margin: $space-l;
+  padding: 0 $space-l;
+  background-color: $teal-50;
+  color: $black;
 }

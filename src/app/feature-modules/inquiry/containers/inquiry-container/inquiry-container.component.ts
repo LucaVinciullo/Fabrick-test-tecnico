@@ -18,6 +18,8 @@ export class InquiryContainerComponent extends AbstractSmartContainerClass {
     id: new FormControl<number | null>(null, [Validators.required, Validators.pattern('^[0-9]*$')]),
   });
 
+  lastInquiredId: number | null = null;
+
   get hasPatternError(): boolean {
     return !!this.idForm.controls.id.errors?.['pattern'];
   }
@@ -33,6 +35,7 @@ export class InquiryContainerComponent extends AbstractSmartContainerClass {
 
   inquiryUser() {
     const { value } = this.idForm.controls.id;
+    this.lastInquiredId = value;
     if (value) this.facade.userInquiry(value);
   }
 }
