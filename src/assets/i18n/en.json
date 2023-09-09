@@ -17,7 +17,7 @@
     "form": {
       "id": {
         "label": "User id",
-        "placeholder": "Ex. 2962",
+        "placeholder": "Ex. 5133735",
         "patternError": "Decimal numbers are invalid"
       },
       "search": "Search user"
