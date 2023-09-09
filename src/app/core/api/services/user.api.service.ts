@@ -15,7 +15,7 @@ export class UserApiService {
     return this.httpService.request<User>('post', 'users', userForm);
   }
 
-  inquiryUsers(): Observable<unknown> {
-    return this.httpService.request('get', 'users');
+  inquiryUsers(userId: number): Observable<User> {
+    return this.httpService.request('get', `users/${userId}`);
   }
 }
