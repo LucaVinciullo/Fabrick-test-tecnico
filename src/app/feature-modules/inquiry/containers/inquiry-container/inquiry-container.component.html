@@ -1,1 +1,24 @@
-<p>inquiry-container works!</p>
+<fab-base-feature-container title="inquiry.title">
+  <form [formGroup]="idForm" class="id-form">
+    <mat-form-field floatLabel="always" appearance="outline" color="accent">
+      <mat-label>{{ 'inquiry.form.id.label' | translate }}</mat-label>
+      <input
+        type="number"
+        matInput
+        formControlName="id"
+        [placeholder]="'inquiry.form.id.placeholder' | translate"
+      >
+      <mat-error
+        *ngIf="hasPatternError">{{ 'inquiry.form.id.patternError' | translate }}</mat-error>
+    </mat-form-field>
+    <button
+      mat-raised-button
+      type="button"
+      color="accent"
+      [disabled]="idForm.invalid"
+      (click)="inquiryUser()"
+    >{{'inquiry.form.search' | translate}}
+    </button>
+  </form>
+</fab-base-feature-container>
+

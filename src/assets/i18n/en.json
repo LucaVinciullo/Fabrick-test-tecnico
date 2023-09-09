@@ -10,7 +10,15 @@
     "title": "Dashboard"
   },
   "inquiry": {
-    "title": "User inquiry"
+    "title": "User inquiry",
+    "form": {
+      "id": {
+        "label": "User id",
+        "placeholder": "Ex. 2962",
+        "patternError": "Decimal numbers are invalid"
+      },
+      "search": "Search user"
+    }
   },
   "registration": {
     "title": "User registration",

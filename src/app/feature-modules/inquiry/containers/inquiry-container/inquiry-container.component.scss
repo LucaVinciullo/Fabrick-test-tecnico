@@ -1,0 +1,11 @@
+@import "src/assets/sass/variables";
+
+.id-form {
+  max-width: $breakpoint-tablet-portrait;
+  margin: $space-l auto;
+
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
