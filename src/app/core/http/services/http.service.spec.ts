@@ -17,7 +17,6 @@ describe('HttpService', () => {
   const options = undefined;
 
   beforeEach(() => {
-
     const httpSpy = jasmine.createSpyObj('HttpClient', ['request']);
     const notificationSpy = jasmine.createSpyObj('NotificationService', ['info', 'error']);
     const loaderSpy = jasmine.createSpyObj('LoaderService', ['incrementLoaderCounter', 'decrementLoaderCounter']);

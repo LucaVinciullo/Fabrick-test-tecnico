@@ -28,6 +28,9 @@
       ],
       "fab-shared/*": [
         "src/app/shared/*"
+      ],
+      "fab-test/*": [
+        "test/*"
       ]
     },
     "lib": [
