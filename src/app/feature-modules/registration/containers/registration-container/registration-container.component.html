@@ -1,4 +1,14 @@
 <fab-base-feature-container title="registration.title">
+  <section *ngIf="(lastRegisteredUser$ | async) as user" class="registered-user">
+    <p>{{ 'registration.complete' | translate: {userId: user.id} }}</p>
+    <button
+      mat-icon-button
+      [attr.aria-label]="'registration.copyUserId' | translate"
+      (click)="copyUserId(user.id)">
+      <mat-icon>file_copy</mat-icon>
+    </button>
+  </section>
+
   <form class="user-form" [formGroup]="userForm">
     <div class="user-form-row">
       <mat-form-field floatLabel="always" appearance="outline" color="accent">
@@ -22,13 +32,18 @@
       </mat-form-field>
     </div>
     <div class="user-form-row">
-      <mat-form-field floatLabel="always" appearance="outline" color="accent">
+      <mat-form-field
+        floatLabel="always"
+        appearance="outline"
+        color="accent"
+        #tooltip="matTooltip"
+        [matTooltip]="'registration.form.nonBinaryWip' | translate"
+        matTooltipPosition="above">
         <mat-label>{{ 'registration.form.gender.label' | translate }}</mat-label>
         <mat-select
           formControlName="gender"
           [placeholder]="'registration.form.gender.placeholder' | translate"
-          [matTooltip]="'registration.form.nonBinaryWip' | translate"
-          matTooltipPosition="above">
+          (click)="genderSelectClicked()">
           <mat-option *ngFor="let value of genderOptions" [value]="value">{{ value }}</mat-option>
         </mat-select>
       </mat-form-field>
@@ -62,4 +77,5 @@
       </button>
     </div>
   </form>
+
 </fab-base-feature-container>
