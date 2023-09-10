@@ -1,5 +1,14 @@
 @import "src/assets/sass/variables";
 
+.registered-user {
+  margin: $space-l;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $teal-100;
+  color: $black;
+}
+
 .user-form {
   margin: $space-l;
   display: flex;
@@ -17,5 +26,5 @@
 }
 
 .buttons-wrapper > button {
-    flex: 0 0 200px;
+  flex: 0 0 200px;
 }

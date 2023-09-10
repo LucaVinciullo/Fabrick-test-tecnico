@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Clipboard } from '@angular/cdk/clipboard';
+import { Component, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatTooltip } from '@angular/material/tooltip';
 import { GenderType } from 'fab-features/registration/model/gender.type';
 import { StatusType } from 'fab-features/registration/model/status.type';
 import { UserFormValue } from 'fab-features/registration/model/user-form-value.interface';
@@ -18,6 +20,8 @@ export class RegistrationContainerComponent extends AbstractSmartContainerClass 
 
   userForm$ = this.facade.userForm$;
 
+  lastRegisteredUser$ = this.facade.lastRegisteredUser$;
+
   userForm: FormGroup<ControlsOf<UserFormValue>> = new FormGroup({
     name: new FormControl<string | null>(null, [Validators.required]),
     email: new FormControl<string | null>(null, [Validators.required, Validators.email]),
@@ -35,7 +39,9 @@ export class RegistrationContainerComponent extends AbstractSmartContainerClass 
     'inactive',
   ];
 
-  constructor(override facade: RegistrationFacadeService) {
+  @ViewChild(MatTooltip) matTooltip: MatTooltip | null = null;
+
+  constructor(override facade: RegistrationFacadeService, private clipboard: Clipboard) {
     super(facade);
 
     this.subscription.add(
@@ -54,6 +60,14 @@ export class RegistrationContainerComponent extends AbstractSmartContainerClass 
         .pipe(debounceTime(500))
         .subscribe(() => this.facade.persistForm(this.userForm.getRawValue())),
     );
+  }
+
+  copyUserId(userId: number) {
+    this.clipboard.copy(String(userId));
+  }
+
+  genderSelectClicked() {
+    if (!this.matTooltip?._isTooltipVisible()) this.matTooltip?.show();
   }
 
   clearForm() {

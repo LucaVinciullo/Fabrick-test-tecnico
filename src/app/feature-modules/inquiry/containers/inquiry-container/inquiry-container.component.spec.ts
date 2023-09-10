@@ -3,7 +3,7 @@ import { InquiryFacadeService } from 'fab-features/inquiry/services/inquiry.faca
 import { containerTestModuleBaseConfiguration } from 'fab-test/container.test.functions';
 import { InquiryContainerComponent } from './inquiry-container.component';
 
-xdescribe('InquiryContainerComponent', () => {
+describe('InquiryContainerComponent', () => {
   let component: InquiryContainerComponent;
   let fixture: ComponentFixture<InquiryContainerComponent>;
   let facadeServiceSpy: jasmine.SpyObj<InquiryFacadeService>;
@@ -12,7 +12,8 @@ xdescribe('InquiryContainerComponent', () => {
     const facadeSpy = jasmine.createSpyObj(
       'InquiryFacadeService',
       ['userInquiry', 'initSubscription', 'clearSubscription', 'clearObservables'],
-      ['usersSubject$', 'users$']);
+      ['usersSubject$', 'users$'],
+    );
     TestBed.configureTestingModule(containerTestModuleBaseConfiguration({
       declarations: [
         InquiryContainerComponent,
@@ -26,6 +27,10 @@ xdescribe('InquiryContainerComponent', () => {
     component = fixture.componentInstance;
     facadeServiceSpy = TestBed.inject(InquiryFacadeService) as jasmine.SpyObj<InquiryFacadeService>;
     fixture.detectChanges();
+  });
+
+  afterEach(() => {
+    TestBed.resetTestingModule();
   });
 
   it('should create', () => {
