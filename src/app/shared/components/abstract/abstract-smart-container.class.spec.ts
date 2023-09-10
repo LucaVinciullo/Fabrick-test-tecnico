@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AbstractSmartContainerClass } from 'fab-shared/components/abstract/abstract-smart-container.class';
-import { AbstractSmartFacadeClass } from 'fab-shared/components/abstract/abstract-smart-facade.class';
+import { AbstractSmartFacadeClass } from 'fab-shared/components/services/abstract-smart-facade.class';
 
 
 @Component({

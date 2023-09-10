@@ -1,8 +1,4 @@
-/**
- * This file is a placeholder.
- * Environment content is determined by scripts/config.js and .env
- */
 export const environment = {
   baseUrl: 'https://gorest.co.in/public/v2/',
-  apiKey: 'your_api_key',
+  apiKey: 'f4e73068805e09a87a5ffb84a6a17c843d73a4fd5e54c0d10d5f6d5a81559d42',
 };

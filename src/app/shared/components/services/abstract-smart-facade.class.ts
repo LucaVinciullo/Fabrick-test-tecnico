@@ -3,7 +3,7 @@ import { Subscription } from 'rxjs';
 
 @Injectable()
 export abstract class AbstractSmartFacadeClass {
-  protected subscription: Subscription | null = null;
+  subscription: Subscription | null = null;
 
   abstract clearObservables(): void;
 
