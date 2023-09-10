@@ -10,12 +10,12 @@
   cursor: pointer;
 
   &:hover {
-    background-color: $blue-grey-800;
+    background-color: $blue-gray-800;
     box-shadow: 0 0 $space-m $space-s $teal-900;
   }
 
   &:active {
-    background-color: $blue-grey-900;
+    background-color: $blue-gray-900;
   }
 
   .mat-icon {
