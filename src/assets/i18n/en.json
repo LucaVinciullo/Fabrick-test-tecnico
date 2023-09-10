@@ -25,7 +25,8 @@
     "user": {
       "email": "Email",
       "gender": "Gender",
-      "status": "Status"
+      "status": "Status",
+      "notFound": "Not found"
     }
   },
   "registration": {

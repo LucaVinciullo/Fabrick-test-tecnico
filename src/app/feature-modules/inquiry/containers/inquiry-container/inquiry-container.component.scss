@@ -25,4 +25,20 @@
   padding: 0 $space-l;
   background-color: $teal-50;
   color: $black;
+
+  &.user-not-found {
+    background-color: $red-50;
+    text-align: center;
+  }
+}
+
+// hide input number arrows
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }

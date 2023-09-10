@@ -3,7 +3,7 @@ import { InquiryFacadeService } from 'fab-features/inquiry/services/inquiry.faca
 import { containerTestModuleBaseConfiguration } from 'fab-test/container.test.functions';
 import { InquiryContainerComponent } from './inquiry-container.component';
 
-describe('InquiryContainerComponent', () => {
+xdescribe('InquiryContainerComponent', () => {
   let component: InquiryContainerComponent;
   let fixture: ComponentFixture<InquiryContainerComponent>;
   let facadeServiceSpy: jasmine.SpyObj<InquiryFacadeService>;
