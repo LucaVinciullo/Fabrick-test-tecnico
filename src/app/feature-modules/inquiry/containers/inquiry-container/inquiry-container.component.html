@@ -3,8 +3,9 @@
     <mat-form-field floatLabel="always" appearance="outline" color="accent">
       <mat-label>{{ 'inquiry.form.id.label' | translate }}</mat-label>
       <input
-        type="number"
         matInput
+        type="number"
+        step="0.01"
         formControlName="id"
         [placeholder]="'inquiry.form.id.placeholder' | translate"
       >
@@ -21,18 +22,33 @@
     </button>
   </form>
 
-  <section *ngIf="(lastInquiredId && (users$ | async)?.[lastInquiredId]) as user" class="user-info-wrapper">
-    <mat-card class="user-card">
-      <mat-card-header>
-        <mat-card-title>{{ 'common.user' | translate }} {{ user?.id }}</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <fab-user-attribute name="inquiry.user.name" [value]="user.name"></fab-user-attribute>
-        <fab-user-attribute name="inquiry.user.email" [value]="user.email"></fab-user-attribute>
-        <fab-user-attribute name="inquiry.user.gender" [value]="user.gender"></fab-user-attribute>
-        <fab-user-attribute name="inquiry.user.status" [value]="user.status"></fab-user-attribute>
-      </mat-card-content>
-    </mat-card>
-  </section>
+  <ng-container *ngIf="lastInquiredId">
+    <section class="user-info-wrapper">
+      <ng-container *ngIf="(users$ | async)?.[lastInquiredId] as user; else userNotFound">
+        <mat-card class="user-card">
+          <mat-card-header>
+            <mat-card-title>{{ 'common.user' | translate }} {{ user?.id }}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <fab-user-attribute name="inquiry.user.name" [value]="user.name"></fab-user-attribute>
+            <fab-user-attribute name="inquiry.user.email" [value]="user.email"></fab-user-attribute>
+            <fab-user-attribute name="inquiry.user.gender" [value]="user.gender"></fab-user-attribute>
+            <fab-user-attribute name="inquiry.user.status" [value]="user.status"></fab-user-attribute>
+          </mat-card-content>
+        </mat-card>
+      </ng-container>
+
+      <ng-template #userNotFound>
+        <mat-card class="user-card user-not-found">
+          <mat-card-header>
+            <mat-card-title>{{ 'common.user' | translate }} 404</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p>{{ 'inquiry.user.notFound' | translate }}</p>
+          </mat-card-content>
+        </mat-card>
+      </ng-template>
+    </section>
+  </ng-container>
 </fab-base-feature-container>
 
