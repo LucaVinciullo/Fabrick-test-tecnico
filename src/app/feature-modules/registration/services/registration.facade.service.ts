@@ -10,11 +10,11 @@ import { map, take } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class RegistrationFacadeService extends AbstractSmartFacadeClass {
-  userFormSubject$ = new BehaviorSubject<UserFormValue | null>(null);
+  private userFormSubject$ = new BehaviorSubject<UserFormValue | null>(null);
 
   userForm$ = this.userFormSubject$.asObservable();
 
-  lastRegisteredUserSubj$ = new BehaviorSubject<User | null>(null);
+  private lastRegisteredUserSubj$ = new BehaviorSubject<User | null>(null);
 
   lastRegisteredUser$ = this.lastRegisteredUserSubj$.asObservable();
 

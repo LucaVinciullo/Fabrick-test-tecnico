@@ -9,7 +9,7 @@ import { map, take } from 'rxjs/operators';
   providedIn: 'root',
 })
 export class InquiryFacadeService extends AbstractSmartFacadeClass {
-  usersSubject$ = new BehaviorSubject<{ [id: number]: User }>({});
+  private usersSubject$ = new BehaviorSubject<{ [id: number]: User }>({});
 
   users$ = this.usersSubject$.asObservable();
 
