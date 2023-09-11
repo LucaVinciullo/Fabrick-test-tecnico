@@ -27,4 +27,4 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Live version
 
-Live version is deployed with [Vercel](https://fabrick-test-tecnico-lhfd69f8g-lucavinciullo.vercel.app/registration).
+Live version is deployed with [Vercel](https://fabrick-test-tecnico-git-master-lucavinciullo.vercel.app/home).
